@@ -14,7 +14,7 @@ private:
 public:
     MultiplayerGame();
 
-    MultiplayerGame(const std::string& name, const std::string& rules, const std::string& preparation, const std::string& cleanup,const int& minPlayers,const int& maxPlayers, const std::vector<std::string>& playerRequirements);
+    MultiplayerGame(const std::string& name, const std::string& rules, const std::string& preparation, const std::string& cleanup, const int& minPlayers, const int& maxPlayers, const std::vector<std::string>& playerRequirements);
 
     void setMinPlayers(int min);
     void setMaxPlayers(int max);
@@ -22,9 +22,12 @@ public:
     int getMinPlayers() const;
     int getMaxPlayers() const;
 
+    std::vector<std::string> getPlayerRequirements() const;
+
     bool canStartGame(const std::vector<std::string>& playerList) const;
 
 };
 
 #endif
 
+#pragma once
